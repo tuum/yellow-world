@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="component" method="upgrade">
+	<name>Yellow</name>
+	<creationDate>2013-10-13</creationDate>
+	<author>Tim Plummer</author>
+	<authorEmail>tim@tamlynsoftware.com</authorEmail>
+	<authorUrl>http://www.tamlynsoftware.com</authorUrl>
+	<copyright>Copyright (c)2013 Tim Plummer</copyright>
+	<license>GNU GPL v2 or later</license>
+	<version>1.0.0</version>
+	<description>Yellow World Example component using the FOF framework</description>
+
+	<!-- Public front end files -->
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>yellow.php</filename>
+		<folder>views</folder>
+	</files>
+
+	<!-- SQL query files to execute on installation -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysql">sql/install/mysql/install.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysqli">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+
+	<!-- SQL query files to execute on uninstallation -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysql">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysqli">sql/install/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Administrator back-end section -->
+	<administration>
+		<!-- Administration menu -->
+		<menu view="cpanel">COM_YELLOW</menu>
+
+		<!-- Back-end files -->
+		<files folder="backend">
+			<folder>sql</folder>
+			<folder>views</folder>
+
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>fof.xml</filename>
+			<filename>index.html</filename>
+			<filename>yellow.php</filename>
+		</files>
+
+		<!-- Back-end translation files -->
+		<languages folder="language/backend">
+			<language tag="en-GB">en-GB/en-GB.com_yellow.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_yellow.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	validate="true"
+>
+	<fieldset name="basic_configuration"
+		label="COM_YELLOW_ITEMS_GROUP_BASIC"
+		description="COM_YELLOW_ITEMS_GROUP_BASIC_DESC"
+		class="span6"
+	>
+		<field name="title" type="text"
+			class="inputbox"
+			label="COM_YELLOW_ITEMS_FIELD_TITLE"
+			labelclass="yellow-label yellow-label-main"
+			required="true"
+			size="50"
+		 />
+		 
+		<field name="enabled" type="list" label="JSTATUS"
+			labelclass="hello-label"
+			description="JFIELD_PUBLISHED_DESC" class="inputbox"
+			filter="intval" size="1" default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		 
+	</fieldset>
+</form>

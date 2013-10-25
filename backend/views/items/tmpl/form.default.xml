@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	type="browse"
+	show_header="1"
+	show_filters="1"
+	show_pagination="1"
+	norows_placeholder="COM_YELLOW_COMMON_NORECORDS"
+>
+	<headerset>
+		<header name="yellow_item_id" type="rowselect" tdwidth="20" />
+		<header name="title" type="fieldsearchable" sortable="true"
+			buttons="yes" buttonclass="btn"
+		/>
+		<header name="created_by" type="user" sortable="true" tdwidth="10%" />
+		<header name="ordering" type="ordering" sortable="true" tdwidth="10%" />
+		<header name="enabled" type="published" sortable="true" tdwidth="8%" />
+
+	</headerset>
+
+	<fieldset name="items">
+		<field name="yellow_item_id" type="selectrow"/>
+
+		<field name="title" type="text"
+			show_link="true"
+			url="index.php?option=com_yellow&amp;view=item&amp;id=[ITEM:ID]"
+			empty_replacement="(no title)"
+		 />
+		
+		<field name="created_by" type="user" sortable="true" tdwidth="10%" />
+
+		<field name="ordering" type="ordering" labelclass="order"/>
+		<field name="enabled" type="published"/>
+	</fieldset>
+</form>
