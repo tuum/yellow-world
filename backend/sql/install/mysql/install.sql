@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS `#__yellow_items` (
   `yellow_item_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
+  `enabled` tinyint(2) NOT NULL,
   `ordering` int(10) NOT NULL DEFAULT '0',
   `created_by` bigint(20) NOT NULL DEFAULT '0',
   `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
